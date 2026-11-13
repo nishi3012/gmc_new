@@ -289,6 +289,55 @@ noticeTabs.forEach(function (tab) {
 
 });
 
+const committeeTabs = document.querySelectorAll(".committee-tab");
+const committeePanels = document.querySelectorAll(".committee-panel");
+
+function selectCommitteeTab(tab, moveFocus) {
+    const targetPanel = document.getElementById(tab.getAttribute("aria-controls"));
+
+    if (!targetPanel) return;
+
+    committeeTabs.forEach(function (item) {
+        const isSelected = item === tab;
+        item.classList.toggle("active", isSelected);
+        item.setAttribute("aria-selected", String(isSelected));
+        item.setAttribute("tabindex", isSelected ? "0" : "-1");
+    });
+
+    committeePanels.forEach(function (panel) {
+        const isSelected = panel === targetPanel;
+        panel.classList.toggle("active", isSelected);
+        panel.hidden = !isSelected;
+    });
+
+    if (moveFocus) tab.focus();
+}
+
+committeeTabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () {
+        selectCommitteeTab(tab, false);
+    });
+
+    tab.addEventListener("keydown", function (event) {
+        let nextIndex = index;
+
+        if (event.key === "ArrowRight") {
+            nextIndex = (index + 1) % committeeTabs.length;
+        } else if (event.key === "ArrowLeft") {
+            nextIndex = (index - 1 + committeeTabs.length) % committeeTabs.length;
+        } else if (event.key === "Home") {
+            nextIndex = 0;
+        } else if (event.key === "End") {
+            nextIndex = committeeTabs.length - 1;
+        } else {
+            return;
+        }
+
+        event.preventDefault();
+        selectCommitteeTab(committeeTabs[nextIndex], true);
+    });
+});
+
 
 /* Duplicate notice content for continuous scrolling */
 

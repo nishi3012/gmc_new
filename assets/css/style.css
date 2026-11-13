@@ -2621,7 +2621,7 @@ body {
 .hero-slider {
     height: 600px;
     margin: 0;
-    overflow: hidden;
+    overflow: visible;
     background: #d7d2ca;
 }
 
@@ -2644,7 +2644,33 @@ body {
 }
 
 .hero-bottom-buttons {
-    display: none;
+    display: flex;
+    width: min(92%, 1060px);
+    gap: 12px;
+}
+
+.hero-bottom-card {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 767px) {
+    .hero-bottom-buttons {
+        width: calc(100% - 24px);
+        gap: 8px;
+    }
+
+    .hero-bottom-card {
+        min-height: 56px;
+        padding: 8px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-bottom-card h3 {
+        font-size: 11px;
+        line-height: 1.3;
+    }
 }
 
 .home-info-section {
@@ -2693,7 +2719,8 @@ body {
     box-sizing: border-box;
 }
 
-.footer-brand h2 {
+.footer-brand h2,
+.footer-brand h3 {
     margin: 0 0 30px;
     color: #ffffff;
     font-size: 17px;
@@ -2886,6 +2913,281 @@ body {
     background: #e94d1f;
 }
 
+.has-dropdown.current-page > .dropdown-toggle {
+    background: #e72a2a;
+    color: #ffffff;
+}
+
+.dropdown-menu a[aria-current="page"] {
+    color: #e72a2a;
+    font-weight: 700;
+}
+
+.about-page,
+.committee-page {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(rgba(225, 228, 231, 0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(225, 228, 231, 0.34) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.about-title,
+.committee-title {
+    margin: 0 0 30px;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.about-section-inner,
+.about-dean-inner,
+.committee-content-inner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.about-page p {
+    margin: 0 0 10px;
+    color: #777777;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-introduction {
+    padding: 110px 20px 50px;
+}
+
+.about-introduction .about-section-inner {
+    max-width: 1280px;
+}
+
+.about-introduction .about-title {
+    text-align: center;
+}
+
+.about-introduction p {
+    text-align: center;
+}
+
+.about-dean-section {
+    width: calc(100% - 50px);
+    max-width: none;
+    margin: 24px auto;
+    padding: 28px;
+    border-radius: 32px;
+    background-color: #f9ded5;
+    background-image:
+        repeating-linear-gradient(135deg, transparent 0, transparent 45px, rgba(218, 151, 130, 0.17) 46px, transparent 48px),
+        repeating-linear-gradient(45deg, transparent 0, transparent 45px, rgba(218, 151, 130, 0.14) 46px, transparent 48px);
+}
+
+.about-dean-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 3.35fr) minmax(240px, 1fr);
+    align-items: start;
+    gap: 30px;
+    max-width: none;
+    padding: 28px;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.about-dean-profile {
+    text-align: center;
+}
+
+.about-dean-profile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 6px;
+    border-radius: 18px;
+}
+
+.about-dean-profile span {
+    display: block;
+    margin-bottom: 4px;
+    color: #111111;
+    font-size: 16px;
+}
+
+.about-dean-profile h3 {
+    margin: 0 0 8px;
+    color: #101010;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.about-dean-profile p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about-detail-section {
+    width: calc(100% - 40px);
+    max-width: 1440px;
+    margin: 28px auto 0;
+    padding: 50px 40px 42px;
+    border-radius: 30px;
+    background: #f9e1d9;
+}
+
+.about-detail-section .about-title {
+    text-align: left;
+}
+
+.about-last-section {
+    margin-bottom: 34px;
+}
+
+.committee-content {
+    min-height: 730px;
+    padding: 110px 20px 70px;
+}
+
+.committee-title {
+    text-align: center;
+}
+
+.committee-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.committee-tab {
+    min-height: 54px;
+    padding: 15px 28px;
+    border: 0;
+    background: #101010;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.committee-tab:hover,
+.committee-tab:focus-visible,
+.committee-tab.active {
+    background: #ff5722;
+}
+
+.committee-tab:focus-visible {
+    outline: 2px solid #1c2539;
+    outline-offset: 2px;
+}
+
+.committee-panel {
+    width: 100%;
+}
+
+.committee-panel[hidden] {
+    display: none;
+}
+
+.committee-panel iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: 0;
+    background: #ffffff;
+}
+
+.committee-document-link {
+    margin: 10px 0 0;
+    text-align: right;
+}
+
+.committee-document-link a {
+    color: #e94d1f;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .about-title,
+    .committee-title {
+        font-size: 32px;
+    }
+
+    .about-introduction,
+    .committee-content {
+        padding: 58px 16px 38px;
+    }
+
+    .about-dean-section {
+        width: calc(100% - 28px);
+        margin: 16px auto;
+        padding: 12px;
+        border-radius: 24px;
+    }
+
+    .about-dean-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .about-dean-copy {
+        order: 2;
+    }
+
+    .about-dean-profile {
+        width: min(100%, 260px);
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .about-detail-section {
+        width: calc(100% - 28px);
+        margin-top: 16px;
+        padding: 34px 22px 28px;
+        border-radius: 24px;
+    }
+
+    .about-last-section {
+        margin-bottom: 24px;
+    }
+
+    .committee-content {
+        min-height: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .committee-title {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .committee-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 14px;
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+
+    .committee-tab {
+        flex: 0 0 auto;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .committee-panel iframe {
+        height: 600px;
+    }
+}
+
 @media (max-width: 767px) {
     .utility-container {
         min-height: 0;
@@ -2946,7 +3248,8 @@ body {
         padding: 0;
     }
 
-    .footer-brand h2 {
+    .footer-brand h2,
+    .footer-brand h3 {
         font-size: 17px;
     }
 

@@ -3380,3 +3380,335 @@ body {
         transition: none;
     }
 }
+
+/* Admissions, scholarships, tenders and contact pages */
+
+.current-page > a {
+    background: #e72a2a;
+    color: #ffffff;
+}
+
+.records-page,
+.contact-page {
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(rgba(225, 228, 231, 0.34) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(225, 228, 231, 0.34) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.records-content {
+    min-height: 580px;
+    padding: 90px 20px 80px;
+}
+
+.records-content-inner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.records-title {
+    margin: 0 0 40px;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.records-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #e2e5e9;
+    border-radius: 6px;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #343b46;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.records-table th,
+.records-table td {
+    padding: 15px 18px;
+    border: 1px solid #e2e5e9;
+    text-align: left;
+    vertical-align: top;
+}
+
+.records-table thead th,
+.records-section-row th {
+    background: #f3f5f7;
+    color: #1c2539;
+    font-weight: 600;
+}
+
+.records-section-row th {
+    background: #f9ded5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.scholarships-table td:first-child {
+    width: 78px;
+}
+
+.admissions-table td:first-child {
+    width: auto;
+}
+
+.admissions-table td:nth-child(2) {
+    width: 100px;
+    white-space: nowrap;
+}
+
+.scholarships-table td:nth-child(2) {
+    width: 55%;
+}
+
+.scholarships-table td ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.scholarships-table td ul li {
+    margin: 0 0 4px;
+}
+
+.record-view-link {
+    display: inline-block;
+    min-width: 66px;
+    padding: 7px 14px;
+    border-radius: 3px;
+    background: #bb0b0b;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.record-view-link:hover,
+.record-view-link:focus-visible {
+    background: #f76129;
+}
+
+.records-contact-row h3 {
+    margin: 0 0 16px;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.records-contact-row p {
+    margin: 0 0 12px;
+    color: #555d68;
+    line-height: 1.7;
+}
+
+.records-contact-row p:last-child {
+    margin-bottom: 0;
+}
+
+.records-contact-row a {
+    color: #bb0b0b;
+}
+
+.tenders-content {
+    min-height: 470px;
+}
+
+.tender-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, 390px);
+    min-height: 285px;
+    margin: 0 auto;
+    padding: 24px;
+    background: #ffe4dc;
+    text-align: center;
+}
+
+.tender-feature h2 {
+    margin: 0;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.contact-content {
+    padding: 85px 20px 100px;
+}
+
+.contact-content-inner {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    margin-bottom: 44px;
+}
+
+.contact-kicker {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #f76129;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.contact-intro h2 {
+    margin: 0;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.contact-intro h2 span {
+    color: #f76129;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.contact-map {
+    min-height: 430px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eeeeee;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+.contact-details {
+    padding: 32px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(28, 37, 57, 0.08);
+}
+
+.contact-details h3 {
+    margin: 0 0 12px;
+    color: #1c2539;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.contact-details h3:not(:first-child) {
+    margin-top: 30px;
+}
+
+.contact-details address,
+.contact-details li {
+    color: #687080;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.contact-details ul {
+    padding: 0;
+}
+
+.contact-details a {
+    color: inherit;
+}
+
+.contact-details a:hover,
+.contact-details a:focus-visible {
+    color: #bb0b0b;
+}
+
+@media (max-width: 767px) {
+    .records-content {
+        min-height: 0;
+        padding: 58px 14px 44px;
+    }
+
+    .records-title {
+        margin-bottom: 26px;
+        font-size: 32px;
+    }
+
+    .records-table {
+        min-width: 610px;
+        font-size: 14px;
+    }
+
+    .admissions-table {
+        min-width: 0;
+    }
+
+    .admissions-table td {
+        padding: 12px 10px;
+    }
+
+    .scholarships-table {
+        min-width: 760px;
+    }
+
+    .records-contact-row h3 {
+        font-size: 16px;
+    }
+
+    .tender-feature {
+        min-height: 255px;
+        padding: 20px;
+    }
+
+    .tender-feature h2 {
+        font-size: 34px;
+    }
+
+    .contact-content {
+        padding: 58px 16px 54px;
+    }
+
+    .contact-intro {
+        margin-bottom: 28px;
+    }
+
+    .contact-intro h2 {
+        font-size: 32px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .contact-map,
+    .contact-map iframe {
+        min-height: 300px;
+    }
+
+    .contact-details {
+        padding: 24px;
+    }
+}
